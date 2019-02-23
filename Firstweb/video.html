@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/firstpage.css" type="text/css" rel="stylesheet">
+<script src="js/audio.js" type="text/javascript"></script>
+<title>昨日青空-影视原声</title>
+<style type="text/css">
+.menu{
+	background:url(my_inmages/33.jpg);
+	text-align:center;
+}
+
+ul{
+	list-style-type:none;
+}
+
+.nav{
+	margin:auto;
+	width:1400px;
+	height:80px;
+}
+
+.nav a{
+	float:left;
+	width:140px;
+	line-height:80px;
+	text-decoration:none;
+	font-size:25px;
+	color:#FFF;
+}
+
+.now_page{
+	background-color:#900;	
+}
+
+.nav li a:hover{
+	background-color:#966;	
+}
+#cans{
+	position: relative;
+	margin: 0 auto;
+	width:1400px;
+	height:600px;
+	background:url(my_inmages/99.jpg);
+	
+	
+}
+#video{
+	/*height: 80vh;*/
+	float: left;
+	background: black;
+	position: relative;   /*去掉这句将会使得video优先级失效*/
+	z-index: 99;
+}
+aside{
+	float: left;
+	height: 500px;
+	width: 10vw;
+	background: black;
+	opacity: 0.9;
+	position: relative;
+}
+aside header h4{
+	color: white;
+	margin-bottom: 20px;
+	margin-top: 100px;
+	text-align: center;
+}
+aside ul{
+	background: black;
+	width: 10vw;
+	list-style: none;
+	text-align: center;
+}
+aside ul li{
+	color: white;
+	font-size: 14px;
+	line-height:30px ;
+}
+aside ul li:hover{
+	
+	background-color: lightgray;
+	color: lightcoral;
+	font-weight: bold;
+}
+aside #playList-hidden {
+	position: absolute;
+	bottom: 250px;
+	right: 0;
+	width:20px ;
+	height: 32px;
+	background: lightgoldenrodyellow;
+	font-size: 16px;
+	font-weight: bold;
+	border-top-left-radius:10px ;
+	border-bottom-left-radius:10px ;
+	opacity: 0.5;
+	z-index: 10000;
+}
+#cans #playList-show1{
+	margin-top: 230px;
+	width:20px ;
+	height: 32px;
+	background:lightgoldenrodyellow;
+	font-size: 16px;
+	font-weight: bold;
+	border-top-right-radius:10px ;
+	border-bottom-right-radius:10px ;
+	opacity: 1;
+	visibility: hidden;
+}
+
+#cans #playList-show1:hover,aside #playList-hidden:hover{
+	opacity: 0.7;
+}
+.select{
+	color: lightcoral;
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- text -->
+<div class="text">
+  <h1>昨日青空</h1>
+  <h2>那时候我们十六七岁，没有智能手机，没有微信抖音，时间很慢，夏天很长，一首老歌唱了又唱，一些人会永远放在心上</h2>
+</div>
+
+<div class="menu">
+  <div class="nav">
+  <ul>
+     <li><a href="firstpage.html" > 首页</a></li>
+      <li><a href="story.html">动漫简介</a></li>
+      <li><a href="Intoduce.html"> 人物介绍</a></li>
+      <li><a href="video.html" class="now_page">影视原声</a></li>
+      <li><a href="pic.html">剧照</a></li>
+  </ul>
+  </div>
+</div>
+<div id="cans">
+            <video controls id="video"　src="" poster="" style="width:80%; height:atuo;"></video>
+            <aside id="playList">
+                   <header>
+					<h4>播放列表</h4>
+			      </header>
+                <ul id="list">
+                    <li value="MV/尤长靖 - 昨日青空.mp4" title="主题曲- 尤长靖 - 昨日青空">主题曲- 尤长靖 - 昨日青空</li>
+                    <li value="MV/牛奶咖啡 - 再见，昨天.mp4"  title="牛奶咖啡 - 再见，昨天" >MV牛奶咖啡 - 再见，昨天</li>
+                    <li value="MV/周深 - 来不及勇敢.mp4" title="周深 - 来不及勇敢" >周深 - 来不及勇敢</li>
+                 </ul>  
+                <button title="收起播放列表" id="playList-hidden"> < </button>
+               </aside>
+                <button title="展开播放列表" id="playList-show1"> > </button>
+        </div>
+</body>
+</html>

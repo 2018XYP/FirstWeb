@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>昨日青空-人物介绍</title>
+<link href="css/firstpage.css" type="text/css" rel="stylesheet">
+<script src="js/pic.js"></script>
+
+<style type="text/css">
+ul{
+	list-style-type:none;
+}
+
+.menu{
+	background:url(my_inmages/33.jpg);
+	text-align:center;
+}
+
+.nav{
+	margin:auto;
+	width:1400px;
+	height:80px;
+}
+
+.nav a{
+	float:left;
+	width:140px;
+	line-height:80px;
+	text-decoration:none;
+	font-size:25px;
+	color:#FFF;
+}
+
+.now_page{
+	background-color:#900;	
+}
+
+.nav li a:hover{
+	background-color:#966;	
+}
+
+#pic{/*错误在属性 写成 .pic*/
+	width:800px;
+	height:500px;
+	position:relative;
+	border:3px solid #333;
+	overflow:hidden;/*溢出隐藏*/
+	margin:100px auto;
+}
+
+#list{
+	width:10400px;
+	height:500px;
+	position:absolute;
+	z-index:1;/*用绝对定位把两个层叠加在一起 值越大越靠上*/
+}
+
+#list img{
+	float:left;
+	width:800px;
+	height:500px;
+	
+}
+
+#buttons span{
+	cursor:pointer;/*假链接*/
+	float:left;
+	boder:1px solid #fff;
+	width:10px;
+	height:10px;
+	border-radius:10px;/*圆角边框*/
+	background:#000;
+	margin-right:5px;
+}
+
+#buttons{
+	position:absolute; 
+	height:10px; 
+	width:170px;
+	z-index:2;
+	bottom:20px; 
+	left:200px;
+	margin-top:50px;/*距离其他盒子top为50px;下沉·*/
+	 }
+
+#buttons .on{
+	background:#C03;
+}
+ .arrow{
+	 cursor:pointer; 
+	 display:none; 
+	 line-height:39px; 
+	 text-align:center;
+	 font-size:36px; 
+     font-weight:bold; 
+	 width:40px;
+	 height:40px; 
+     position:absolute; 
+	 z-index:2; 
+	 top:180px;
+     background-color:RGBA(0,0,0,.3); 
+	 color:#fff;
+	 }
+
+.arrow:hover{
+	background-color:RGBA(0,0,0,0.7);/*前三个是rgb值 后一个为透明度*/
+	}
+
+#pic:hover .arrow{
+	display:block;/*让对象成为块级元素*/
+	
+}
+
+#prev{
+	left:20px;
+}
+
+#next{
+	right:20px;
+	}
+
+.background{
+	width:1400px;
+	height:700px;
+	position:absolute;
+	background:url(my_inmages/21.jpg);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- text -->
+<div class="text">
+  <h1>昨日青空</h1>
+  <h2>那时候我们十六七岁，没有智能手机，没有微信抖音，时间很慢，夏天很长，一首老歌唱了又唱，一些人会永远放在心上</h2>
+</div>
+
+<div class="menu">
+  <div class="nav">
+  <ul>
+      <li><a href="firstpage.html">首页</a></li>
+      <li><a href="story.html">动漫简介</a></li>
+      <li><a href="Intoduce.html" >人物介绍</a></li>
+      <li><a href="video.html">影视原声</a></li>
+      <li><a href="pic.html" class="now_page">剧照</a></li>
+  </ul>
+  </div>
+ </div>
+ 
+
+<div class="background">
+  <div id="pic">
+         <div id="list" style="left:-800px;">
+                <img src="my_inmages/15.jpg" alt="5.pg"/>
+                <img src="my_inmages/20.jpg" alt="5.pg" />
+                <img src="my_inmages/23.jpg" alt="5.pg"/>
+                <img src="my_inmages/4.jpg" alt="5.pg"/>
+                <img src="my_inmages/5.jpg" alt="5.pg"/>
+                <img src="my_inmages/6.jpg" alt="5.pg"/>
+                <img src="my_inmages/7.jpg" alt="5.pg"/>
+                <img src="my_inmages/8.jpg" alt="5.pg"/>
+                <img src="my_inmages/9.jpg" alt="5.pg"/>
+                <img src="my_inmages/10.jpg" alt="5.pg"/>
+                <img src="my_inmages/11.jpg" alt="5.pg"/>
+                <img src="my_inmages/15.jpg" alt="5.pg"/>
+                <img src="my_inmages/20.jpg" alt="5.pg" />
+                 
+         </div> 
+        
+        <div id="buttons" >
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+        <span index="6"></span>
+        <span index="7"></span>
+        <span index="8"></span>
+        <span index="9"></span>
+        <span index="10"></span>
+        <span index="11"></span>
+        </div>
+       
+        <a href="javascript:;" class="arrow" id="prev">&lt;</a> <!--注意&lt不是&it-->   
+        <a href="javascript:;" class="arrow" id="next">&gt;</a>     
+  </div> 
+</div>        
+</body>
+</html>
